@@ -158,6 +158,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   	 HAL_TIM_IC_Start_IT(&htim1, TIM_CHANNEL_1);
+  	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -172,6 +173,13 @@ int main(void)
 	  	  } else {
 	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
 	  	  }
+
+	  htim2.Instance->CCR1 = 25;  // duty cycle is .5 ms
+	  	  HAL_Delay(2000);
+	  	  htim2.Instance->CCR1 = 75;  // duty cycle is 1.5 ms
+	  	  HAL_Delay(2000);
+	  	  htim2.Instance->CCR1 = 125;  // duty cycle is 2.5 ms
+	  	  HAL_Delay(2000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
