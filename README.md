@@ -5,23 +5,23 @@ This project implements a Smart Waste Management System using STM32 microcontrol
 
 ## Project Overview
 The system includes:
-* Microcontrollers: STM32 Nucleo F401RE boards (2)
-* Components: Servo Motors, Ultrasonic Sensors, I2C LCD Displays, Voice Recognition Module
-* Libraries: STM32 HAL for hardware abstraction, Speech Recognition Library for voice processing
+* __Microcontrollers:__ STM32 Nucleo F401RE boards (2)
+* __Components:__ Servo Motors, Ultrasonic Sensors, I2C LCD Displays, Voice Recognition Module
+* __Libraries:__ STM32 HAL for hardware abstraction, Speech Recognition Library for voice processing
 
 This system uses voice commands to control a multi-compartment bin with dedicated sections for recycling, compost, and trash. Voice input is processed to identify the type of waste, triggering the appropriate bin section to open. Additionally, ultrasonic sensors monitor the fill levels in each compartment, displaying this data on the corresponding LCD screens.
 
 ## Features
-* Voice Recognition: The system recognizes predefined commands to categorize waste disposal (e.g., “trash,” “recycle,” “compost”).
-* Automatic Compartment Control: Based on voice input, the system opens the correct compartment using servo motors.
-* Fill-Level Detection: Each bin compartment includes an ultrasonic sensor to measure and monitor fill levels in real-time.
-* User Feedback: Fill levels are displayed on three LCD screens, allowing easy identification of which bins require emptying.
+* __Voice Recognition:__ The system recognizes predefined commands to categorize waste disposal (e.g., “trash,” “recycle,” “compost”).
+* __Automatic Compartment Control:__ Based on voice input, the system opens the correct compartment using servo motors.
+* __Fill-Level Detection:__ Each bin compartment includes an ultrasonic sensor to measure and monitor fill levels in real-time.
+* __User Feedback:__ Fill levels are displayed on three LCD screens, allowing easy identification of which bins require emptying.
 
 ## Technical Components
-* STM32CubeIDE Configuration: Used to set up GPIO, I2C, UART, ADC, and PWM for servo motor control.
-* UART Communication: Transfers voice recognition data from the microphone module to the STM32 microcontroller for processing.
-* I2C Interface: Controls the LCD displays for fill-level feedback.
-* Ultrasonic Sensor Integration: HC-SR04 ultrasonic sensors are configured to detect proximity and measure bin fill levels, with data processed to determine bin status.
+* __STM32CubeIDE Configuration:__ Used to set up GPIO, I2C, UART, ADC, and PWM for servo motor control.
+* __UART Communication:__ Transfers voice recognition data from the microphone module to the STM32 microcontroller for processing.
+* __I2C Interface:__ Controls the LCD displays for fill-level feedback.
+* __Ultrasonic Sensor Integration:__ HC-SR04 ultrasonic sensors are configured to detect proximity and measure bin fill levels, with data processed to determine bin status.
 
 ## Setup and Installation
 ### 1. Hardware Connections:
