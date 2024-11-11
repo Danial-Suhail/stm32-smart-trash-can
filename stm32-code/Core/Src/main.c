@@ -159,6 +159,9 @@ int main(void)
 
   	 HAL_TIM_IC_Start_IT(&htim1, TIM_CHANNEL_1);
   	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  	  int angle = 90;  //90°
+  	  int pulse = 250 + (5*per_deg);  // calculate pulse value, starting from 250
+  	  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, pulse);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -174,12 +177,18 @@ int main(void)
 	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
 	  	  }
 
-	  htim2.Instance->CCR1 = 25;  // duty cycle is .5 ms
-	  	  HAL_Delay(2000);
-	  	  htim2.Instance->CCR1 = 75;  // duty cycle is 1.5 ms
-	  	  HAL_Delay(2000);
-	  	  htim2.Instance->CCR1 = 125;  // duty cycle is 2.5 ms
-	  	  HAL_Delay(2000);
+//	  htim2.Instance->CCR1 = 25;  // duty cycle is .5 ms
+//	  	  HAL_Delay(2000);
+//	  	  htim2.Instance->CCR1 = 75;  // duty cycle is 1.5 ms
+//	  	  HAL_Delay(2000);
+//	  	  htim2.Instance->CCR1 = 125;  // duty cycle is 2.5 ms
+//	  	  HAL_Delay(2000);
+
+	  htim2.Instance->CCR1 = angle; // 90 degrees
+	  HAL_Delay(500);
+	  htim2.Instance->CCR1 = -angle; // -90 degrees back to initial
+	  HAL_Delay(500);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
