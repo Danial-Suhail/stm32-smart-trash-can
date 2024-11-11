@@ -227,10 +227,11 @@ int main(void)
   MX_TIM1_Init();
   lcd_init();
 
+  int num = 1234;
+  char numChar[5];
+  sprintf(numChar, "%d", num);
   lcd_put_cur(0, 0);
-  lcd_send_string ("HELLO WORLD");
-  lcd_put_cur(1, 0);
-  lcd_send_string("from CTECH");
+  lcd_send_string (numChar);;
   /* USER CODE BEGIN 2 */
 
   	 HAL_TIM_IC_Start_IT(&htim1, TIM_CHANNEL_1);
