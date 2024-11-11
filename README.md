@@ -11,6 +11,11 @@ The system includes:
 
 This system uses voice commands to control a multi-compartment bin with dedicated sections for recycling, compost, and trash. Voice input is processed to identify the type of waste, triggering the appropriate bin section to open. Additionally, ultrasonic sensors monitor the fill levels in each compartment, displaying this data on the corresponding LCD screens.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/c076716e-6538-487f-949d-416228c89029" alt="Screenshot">
+</div>
+
+
 ## Features
 * __Voice Recognition:__ The system recognizes predefined commands to categorize waste disposal (e.g., “trash,” “recycle,” “compost”).
 * __Automatic Compartment Control:__ Based on voice input, the system opens the correct compartment using servo motors.
@@ -22,6 +27,10 @@ This system uses voice commands to control a multi-compartment bin with dedicate
 * __UART Communication:__ Transfers voice recognition data from the microphone module to the STM32 microcontroller for processing.
 * __I2C Interface:__ Controls the LCD displays for fill-level feedback.
 * __Ultrasonic Sensor Integration:__ HC-SR04 ultrasonic sensors are configured to detect proximity and measure bin fill levels, with data processed to determine bin status.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/00c73dd2-e9fa-45d1-9c62-ebea2c729c13" alt="Screenshot">
+</div>
 
 ## Setup and Installation
 ### 1. Hardware Connections:
