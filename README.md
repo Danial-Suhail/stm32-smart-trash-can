@@ -40,8 +40,8 @@ This system uses voice commands to control a multi-compartment bin with dedicate
 4. Monitor fill levels displayed on the LCD screens.
 
 ## References
-<a href="https://www.st.com/resource/en/user_manual/um1725-description-of-stm32f4-hal-and-lowlayer-drivers-stmicroelectronics.pdf">STM32 HAL Library Documentation</a>
-<a href="https://www.st.com/resource/en/user_manual/um2609-stm32cubeide-user-guide-stmicroelectronics.pdf">STM32CubeIDE</a>
+* <a href="https://www.st.com/resource/en/user_manual/um1725-description-of-stm32f4-hal-and-lowlayer-drivers-stmicroelectronics.pdf">STM32 HAL Library Documentation</a>
+* <a href="https://www.st.com/resource/en/user_manual/um2609-stm32cubeide-user-guide-stmicroelectronics.pdf">STM32CubeIDE</a>
 
 
 
