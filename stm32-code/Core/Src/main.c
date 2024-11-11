@@ -175,6 +175,10 @@ int main(void)
 	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_SET);
 	  	  } else {
 	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
+	  		  htim2.Instance->CCR1 = angle; // 90 degrees
+	  		  HAL_Delay(500);
+	  		  htim2.Instance->CCR1 = -angle; // -90 degrees back to initial
+	  		  HAL_Delay(500);
 	  	  }
 
 //	  htim2.Instance->CCR1 = 25;  // duty cycle is .5 ms
@@ -184,10 +188,7 @@ int main(void)
 //	  	  htim2.Instance->CCR1 = 125;  // duty cycle is 2.5 ms
 //	  	  HAL_Delay(2000);
 
-	  htim2.Instance->CCR1 = angle; // 90 degrees
-	  HAL_Delay(500);
-	  htim2.Instance->CCR1 = -angle; // -90 degrees back to initial
-	  HAL_Delay(500);
+
 
     /* USER CODE BEGIN 3 */
   }
