@@ -167,7 +167,7 @@ int main(void)
     /* USER CODE END WHILE */
 	  HCSR04_Read();
 	  HAL_Delay(200);
-	  if (Distance > 30) { // Test Distance. Will be used for Servomotor output
+	  if (Distance > 30) { // Test Distance. Will be used for Servomotor output.
 	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_SET);
 	  	  } else {
 	  		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
