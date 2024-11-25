@@ -223,32 +223,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-		HAL_UART_Receive(&huart1, receivedData, 1, 100);
-		if (receivedData[0] == '1'){
-	        __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 250);
-	        HAL_Delay(5000);
-	        __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 750);
-	        HAL_Delay(5000);
-	        __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 250);
-	        HAL_Delay(5000);
-		} else if (receivedData[0] == '2'){
-	        __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 250);
-	        HAL_Delay(5000);
-	        __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 750);
-	        HAL_Delay(5000);
-	        __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 250);
-	        HAL_Delay(5000);
-		} else if(receivedData[0] == '3') {
-	        // Enable Channel 3 (htim3)
-	        __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, 250);
-	        HAL_Delay(5000);
-	        __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, 750);
-	        HAL_Delay(5000);
-	        __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, 250);
-	        HAL_Delay(5000);
-
-		}
       HCSR04_Read();
       HAL_Delay(200); // Small delay to avoid overlap
       char distanceStr[20];
